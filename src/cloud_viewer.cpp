@@ -8,7 +8,7 @@ int user_data;
 void
 viewerOneOff (pcl::visualization::PCLVisualizer& viewer)
 {
-    viewer.setBackgroundColor (1.0, 0.5, 1.0);
+    viewer.setBackgroundColor (0.0, 0.0, 0.0);
     pcl::PointXYZ o;
     o.x = 1.0;
     o.y = 0;
@@ -33,7 +33,7 @@ int
 main ()
 {
     pcl::PointCloud<pcl::PointXYZ>::Ptr cloud (new pcl::PointCloud<pcl::PointXYZ>);
-    pcl::io::loadPCDFile ("data/table_scene_lms400.pcd", *cloud);
+    pcl::io::loadPCDFile ("data/cluster_extraction/cloud_cluster_4.pcd", *cloud);
     
     pcl::visualization::CloudViewer viewer("Cloud Viewer");
 
